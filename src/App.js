@@ -9,10 +9,15 @@ function App() {
         {id: 'e4', title: 'New Desk (Wooden)', amount: 450, date: new Date(2021, 5, 18)}
     ];
 
+    function addExpenseHandler(expense) {
+        console.log("In App.js");
+        console.log(expense);
+    }
+
     return (
         <div>
             <h1>Expense Tracker</h1>
-            <NewExpense/>
+            <NewExpense onAddExpense={addExpenseHandler} />
             <Expenses items={expenses}/>
         </div>
     );
